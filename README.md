@@ -7,6 +7,7 @@ uvicorn api:app --reload
 This service will run at http://127.0.0.1:8000, and the Flutter app can call the /predict/ endpoint to make requests.
 
 2. Flutter Calls REST API
+
 Example: Flutter Code to Call API
 ```python
 import 'dart:convert';
@@ -33,6 +34,7 @@ Future<void> getMask(String imagePath, int x, int y) async {
 ```
 
 3. Passing and Displaying the Mask
+
 Passing: The Flutter app sends the image and coordinate points to your API, and the API returns the corresponding mask data.
 Displaying: Flutter parses the returned mask data and uses Canvas or CustomPainter to display the mask on the image.
 
