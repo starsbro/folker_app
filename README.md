@@ -1,4 +1,5 @@
 1. Run the API
+
 Start the service using uvicorn:
 ```console
 uvicorn api:app --reload
