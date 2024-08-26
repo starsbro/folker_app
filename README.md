@@ -41,6 +41,7 @@ Displaying: Flutter parses the returned mask data and uses Canvas or CustomPaint
 
 
 
+
 In Flutter, calling a REST API involves the following steps:
 1. Add Dependencies Add the http dependency to your Flutter project's pubspec.yaml file to handle HTTP requests.
 ```console
