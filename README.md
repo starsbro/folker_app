@@ -1,8 +1,10 @@
 1. Run the API
 Start the service using uvicorn:
+
 '''
 uvicorn api:app --reload
 '''
+
 This service will run at http://127.0.0.1:8000, and the Flutter app can call the /predict/ endpoint to make requests.
 
 2. Flutter Calls REST API
