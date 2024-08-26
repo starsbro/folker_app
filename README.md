@@ -36,6 +36,7 @@ Future<void> getMask(String imagePath, int x, int y) async {
 3. Passing and Displaying the Mask
 
 Passing: The Flutter app sends the image and coordinate points to your API, and the API returns the corresponding mask data.
+
 Displaying: Flutter parses the returned mask data and uses Canvas or CustomPainter to display the mask on the image.
 
 
