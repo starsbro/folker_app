@@ -1,15 +1,13 @@
 1. Run the API
 Start the service using uvicorn:
-
-'''
+```console
 uvicorn api:app --reload
-'''
-
+```
 This service will run at http://127.0.0.1:8000, and the Flutter app can call the /predict/ endpoint to make requests.
 
 2. Flutter Calls REST API
 Example: Flutter Code to Call API
-'''
+```python
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -31,7 +29,7 @@ Future<void> getMask(String imagePath, int x, int y) async {
     print('Failed to get mask');
   }
 }
-'''
+```
 
 3. Passing and Displaying the Mask
 Passing: The Flutter app sends the image and coordinate points to your API, and the API returns the corresponding mask data.
@@ -39,22 +37,22 @@ Displaying: Flutter parses the returned mask data and uses Canvas or CustomPaint
 
 In Flutter, calling a REST API involves the following steps:
 1. Add Dependencies Add the http dependency to your Flutter project's pubspec.yaml file to handle HTTP requests.
-'''
+```console
 dependencies:
   flutter:
     sdk: flutter
   http: ^0.14.0
-'''
+```
 Then run flutter pub get to install the dependencies.
 
 2. Import the http Package Import the http package in your Dart file.
-'''
+```python
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-'''
+```
 
 3. Write the API Call Function Write a function to call your REST API. Here’s an example that uploads an image and sends coordinate information to the API, then retrieves the mask data from the response.
-'''
+```python
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
@@ -89,10 +87,10 @@ Future<void> getMask(String imagePath, int x, int y) async {
     print('Error: $e');
   }
 }
-'''
+```
 
 4. Call the Function In your Flutter app, call the getMask function and pass the image path and coordinates.
-'''
+```python
 void main() {
   String imagePath = 'path_to_your_image/image.jpg';  // Replace with the path to your image
   int x = 500;  // Replace with your coordinate
@@ -100,7 +98,7 @@ void main() {
 
   getMask(imagePath, x, y);
 }
-'''
+```
 
 5. Display Mask Data To display the mask data in the Flutter UI, you can use CustomPainter or Canvas. The exact method will depend on how you want to visualize the mask data.
 
